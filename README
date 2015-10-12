@@ -1,0 +1,11 @@
+Simulated Provider
+
+A simulated implementation of a "cloud provider". In reality, a `provider` maintains some number of `datacenter`s, each of which may contain some number of `zones`, each of which contains some number of `machines` (physical and virtual).
+
+A `client` of a `provider` may make the following requests of the provider:
+
+machines
+  create (machineDescription/s)
+  destroy(machineID/s)
+  status (machineID/s)
+  list
