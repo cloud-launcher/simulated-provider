@@ -9,3 +9,25 @@ machines
   destroy(machineID/s)
   status (machineID/s)
   list
+
+
+Provider Data Structures
+
+Machine
+  specs
+
+DeployedMachine : Machine
+  id
+  location
+  status
+
+
+// May be able to adapt this to a shorter, more flexible structure.
+// Why these names? Why this depth?
+MachineGroup : Set<Machine>
+
+MachineZone : Set<MachineGroup>
+
+DataCenter : Set<MachineZone>
+
+Provider : Set<DataCenter>
